@@ -46,7 +46,7 @@ func main() {
 	}
 
 	// Only listen on localhost by default for security reason
-	listenAddr := "localhost:" + wwwPort
+	listenAddr := "0.0.0.0:" + wwwPort
 
 	http.Handle("/", handlers.CombinedLoggingHandler(os.Stdout, http.FileServer(http.Dir(wwwFolder))))
 
